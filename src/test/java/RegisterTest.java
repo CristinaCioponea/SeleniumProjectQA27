@@ -15,5 +15,6 @@ public class RegisterTest {
         driver.findElement(By.id("firstname")).sendKeys("Cioponea");
 
 
+
     }
 }
