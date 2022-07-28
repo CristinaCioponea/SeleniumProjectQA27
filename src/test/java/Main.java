@@ -6,8 +6,11 @@ public class Main {
 //      loginTest.validLoginTest();
 //      RegisterTest registerTest = new RegisterTest();
 //      registerTest.validRegisterTest();
-      AccountInformation accountInformation = new AccountInformation();
-      accountInformation.validAccountInformation();
+//      AccountInformation accountInformation = new AccountInformation();
+//      accountInformation.validAccountInformation();
+      YourLanguage yourLanguage = new YourLanguage();
+      yourLanguage.selectYourLanguage();
+
 
 
     }
