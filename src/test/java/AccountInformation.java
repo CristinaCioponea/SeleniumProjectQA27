@@ -14,6 +14,13 @@ public class AccountInformation {
         driver.findElement(By.id("pass")).sendKeys("cristina");
         driver.findElement(By.cssSelector("#send2 > span > span")).click();
         driver.findElement(By.cssSelector("body > div > div.page > div.main-container.col2-left-layout > div > div.col-left.sidebar.col-left-first > div > div.block-content > ul > li:nth-child(2) > a")).click();
+        driver.findElement(By.id("current_password")).sendKeys("cristina");
+        driver.findElement(By.cssSelector("#form-validate > div:nth-child(1) > ul > li.control > label")).click();
+        driver.findElement(By.id("password")).sendKeys("cristina");
+        driver.findElement(By.id("confirmation")).sendKeys("cristina");
+        driver.findElement(By.cssSelector("#form-validate > div.buttons-set > button")).click();
+
+
 
 
     }
