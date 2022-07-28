@@ -20,6 +20,7 @@ public class RegisterTest {
         driver.findElement(By.id("confirmation")).sendKeys("cristina");
         driver.findElement(By.cssSelector("#form-validate > div.fieldset > ul > li.control > label")).click();
         driver.findElement(By.cssSelector("#form-validate > div.buttons-set > button > span > span")).click();
+        driver.quit();
 
 
 

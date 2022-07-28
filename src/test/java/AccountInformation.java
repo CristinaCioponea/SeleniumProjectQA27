@@ -19,6 +19,7 @@ public class AccountInformation {
         driver.findElement(By.id("password")).sendKeys("cristina");
         driver.findElement(By.id("confirmation")).sendKeys("cristina");
         driver.findElement(By.cssSelector("#form-validate > div.buttons-set > button")).click();
+        driver.quit();
 
 
 

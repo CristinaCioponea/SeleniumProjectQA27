@@ -10,6 +10,7 @@ public class YourLanguage {
         driver.get("http://testfasttrackit.info/selenium-test");
         driver.findElement(By.cssSelector("#select-language")).click();
         driver.findElement(By.cssSelector("#select-language")).click();
+        driver.quit();
 
     }
 
