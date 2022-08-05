@@ -1,12 +1,15 @@
+import org.junit.After;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AccountInformation {
     @Test
 
-    public void validAccountInformation(){
+    public void validAccountInformation() {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -22,7 +25,14 @@ public class AccountInformation {
         driver.findElement(By.id("password")).sendKeys("cristina");
         driver.findElement(By.id("confirmation")).sendKeys("cristina");
         driver.findElement(By.cssSelector("#form-validate > div.buttons-set > button")).click();
-        driver.quit();
+        WebElement myAccount = driver.findElement(By.cssSelector("body"));
+        Assert.assertTrue(myAccount.isDisplayed());
+        WebElement verifyAccount = driver.findElement(By.cssSelector("body"));
+        Assert.assertEquals("Hello, Cioponea C Cristina!", verifyAccount.getText());
+            driver.quit();
+
+
+
 
 
 
