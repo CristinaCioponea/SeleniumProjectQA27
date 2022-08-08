@@ -23,14 +23,14 @@ import org.openqa.selenium.support.ui.Select;
 
 @Test
         public void validLoginTest(){
-            driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label")).click();
-            driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
+            driver.findElement(By.cssSelector(".skip-account .label")).click();
+            driver.findElement(By.cssSelector("[title=\"Log In\"]")).click();
             driver.findElement(By.id("email")).sendKeys("jula.cristina@yahoo.com");
             driver.findElement(By.id("pass")).sendKeys("cristina");
             driver.findElement(By.id("send2")).click();
-            WebElement welcomeText = driver.findElement(By.cssSelector("body > div > div.page > div.main-container.col2-left-layout > div > div.col-main > div.my-account > div > div.welcome-msg > p.hello > strong"));
+            WebElement welcomeText = driver.findElement(By.cssSelector(".hello strong"));
             Assert.assertEquals("Hello, Cioponea C Cristina!", welcomeText.getText());
-            WebElement myAccount = driver.findElement(By.cssSelector("body > div > div.page > div.main-container.col2-left-layout > div > div.col-left.sidebar.col-left-first > div > div.block-title > strong > span"));
+            WebElement myAccount = driver.findElement(By.cssSelector(".hello strong"));
             Assert.assertTrue(myAccount.isDisplayed());
 
         }

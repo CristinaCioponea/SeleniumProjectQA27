@@ -25,7 +25,10 @@ public class AddressBook {
         driver.findElement(By.id("zip")).sendKeys("1856");
         driver.findElement(By.id("country")).sendKeys("Statele Unite ale Americii");
         driver.findElement(By.cssSelector(".button[title=\"Save Address\"]")).click();
-        driver.quit();
+
+
+
+
 
 
 
