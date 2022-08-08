@@ -1,4 +1,3 @@
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -25,11 +24,14 @@ public class AccountInformation {
         driver.findElement(By.id("password")).sendKeys("cristina");
         driver.findElement(By.id("confirmation")).sendKeys("cristina");
         driver.findElement(By.cssSelector("#form-validate > div.buttons-set > button")).click();
+
         WebElement myAccount = driver.findElement(By.cssSelector("body"));
         Assert.assertTrue(myAccount.isDisplayed());
-        WebElement verifyAccount = driver.findElement(By.cssSelector("body"));
+        WebElement verifyAccount = driver.findElement(By.cssSelector(".hello strong"));
+
         Assert.assertEquals("Hello, Cioponea C Cristina!", verifyAccount.getText());
-            driver.quit();
+
+
 
 
 
