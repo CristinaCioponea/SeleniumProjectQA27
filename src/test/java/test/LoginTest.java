@@ -34,6 +34,7 @@ public class LoginTest {
         AccountPage accountPage = new AccountPage(driver);
         // navigate to homepage
         driver.get("http://testfasttrackit.info/selenium-test");
+
     }
 
 @Test

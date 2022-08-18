@@ -15,11 +15,14 @@ public class AccountInformation {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://testfasttrackit.info/selenium-test");
+
         driver.findElement(By.cssSelector(".skip-account .label")).click();
         driver.findElement(By.cssSelector(".skip-active [title='My Account']")).click();
         driver.findElement(By.id("email")).sendKeys("jula.cristina@yahoo.com");
         driver.findElement(By.id("pass")).sendKeys("cristina");
         driver.findElement(By.cssSelector("#send2")).click();
+
+
         driver.findElement(By.cssSelector(".block-content li:nth-child(2) a")).click();
         driver.findElement(By.id("current_password")).sendKeys("cristina");
         driver.findElement(By.cssSelector("li.control>label")).click();

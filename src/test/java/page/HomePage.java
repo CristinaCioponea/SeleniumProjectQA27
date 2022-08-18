@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.net.IDN;
+
 public class HomePage {
     //driver
     private WebDriver driver;
@@ -17,12 +19,25 @@ public class HomePage {
      private WebElement accountLink;
     @FindBy(css = "[title=\"Log In\"]")
     private WebElement loginLink;
+    @FindBy(id = "search")
+    private WebElement searchField;
+    @FindBy(css = ".search-button")
+    private WebElement searchButton;
+
+
+
     //methods
     public void clickAccountLink (){
         accountLink.click();
     }
     public void clickLoginLink(){
         loginLink.click();
+    }
+    public void setSearchField(String value) {
+        searchField.sendKeys(value);
+    }
+    public void clickSearchButton(){
+        searchButton.click();
     }
 
 
