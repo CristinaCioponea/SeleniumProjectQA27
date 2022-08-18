@@ -25,18 +25,6 @@ public class LoginTest extends BaseTest{
     loginPage.clickLoginButton();
     Assert.assertEquals("Hello, Cioponea C Cristina!", accountPage.getWelcomeText());
 
-
-
-            driver.findElement(By.cssSelector(".skip-account .label")).click();
-            driver.findElement(By.cssSelector("[title=\"Log In\"]")).click();
-            driver.findElement(By.id("email")).sendKeys("jula.cristina@yahoo.com");
-            driver.findElement(By.id("pass")).sendKeys("cristina");
-            driver.findElement(By.id("send2")).click();
-            WebElement welcomeText = driver.findElement(By.cssSelector(".hello strong"));
-            Assert.assertEquals("Hello, Cioponea C Cristina!", welcomeText.getText());
-            WebElement myAccount = driver.findElement(By.cssSelector(".hello strong"));
-            Assert.assertTrue(myAccount.isDisplayed());
-
         }
         @Test
 

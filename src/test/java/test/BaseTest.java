@@ -4,12 +4,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import page.AccountPage;
-import page.HomePage;
-import page.LoginPage;
-import page.SearchResultsPage;
+import page.*;
 
 public class BaseTest {
+    public String userEmail = "jula.cristina@yahoo.com";
+    public String userPass = "cristina";
+
+
     //driver
     public WebDriver driver;
     //page objects
@@ -17,6 +18,8 @@ public class BaseTest {
     public LoginPage loginPage;
     public AccountPage accountPage;
     public SearchResultsPage searchResultsPage;
+    public ProductPage productPage;
+    public CartPage cartPage;
 
 
     @Before
@@ -30,6 +33,9 @@ public class BaseTest {
         loginPage = new LoginPage(driver);
         accountPage = new AccountPage(driver);
         searchResultsPage = new SearchResultsPage(driver);
+        productPage = new ProductPage(driver);
+        cartPage = new CartPage(driver);
+
 
         // navigate to homepage
         driver.get("http://testfasttrackit.info/selenium-test");
