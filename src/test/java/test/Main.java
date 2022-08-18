@@ -1,16 +1,17 @@
+package test;
 
 public class Main {
 
     public static void main(String[] args) {
-//      LoginTest loginTest = new LoginTest();
+//      test.LoginTest loginTest = new test.LoginTest();
 //      loginTest.validLoginTest();
-//      RegisterTest registerTest = new RegisterTest();
+//      test.RegisterTest registerTest = new test.RegisterTest();
 //      registerTest.validRegisterTest();
-//      AccountInformation accountInformation = new AccountInformation();
+//      test.AccountInformation accountInformation = new test.AccountInformation();
 //      accountInformation.validAccountInformation();
-//      YourLanguage yourLanguage = new YourLanguage();
+//      test.YourLanguage yourLanguage = new test.YourLanguage();
 //      yourLanguage.selectYourLanguage();
-//        AddressBook addressBook = new AddressBook();
+//        test.AddressBook addressBook = new test.AddressBook();
 //        addressBook.addressBook();
 
 
