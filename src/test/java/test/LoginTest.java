@@ -20,8 +20,8 @@ public class LoginTest extends BaseTest{
         public void validLoginTest(){
     homePage.clickAccountLink();
     homePage.clickLoginLink();
-    loginPage.setEmailField("jula.cristina@yahoo.com");
-    loginPage.setPassField("cristina");
+    loginPage.setEmailField(userEmail);
+    loginPage.setPassField(userPass);
     loginPage.clickLoginButton();
     Assert.assertEquals("Hello, Cioponea C Cristina!", accountPage.getWelcomeText());
 

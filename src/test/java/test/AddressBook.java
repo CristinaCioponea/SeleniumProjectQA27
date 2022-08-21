@@ -6,17 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class AddressBook {
+public class AddressBook extends BaseTest{
     @Test
     public void addressBook(){
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("http://testfasttrackit.info/selenium-test");
+
         driver.findElement(By.cssSelector(".skip-account .label")).click();
         driver.findElement(By.cssSelector(".skip-active [title='My Account']")).click();
-        driver.findElement(By.id("email")).sendKeys("jula.cristina@yahoo.com");
-        driver.findElement(By.id("pass")).sendKeys("cristina");
+        driver.findElement(By.id("email")).sendKeys(userEmail);
+        driver.findElement(By.id("pass")).sendKeys(userPass);
         driver.findElement(By.cssSelector("#send2")).click();
         driver.findElement(By.cssSelector(".block-content li:nth-child(3) a")).click();
         driver.findElement(By.cssSelector(".customer-account")).click();
