@@ -12,21 +12,20 @@ import page.LoginPage;
 public class CartTest extends BaseTest{
     @Test
     public void addToCartTest (){
-        String productName = "Silver Desert necklace";
-        int productQty = 2;
+        String productName = "SHAY PRINTED PILLOW";
+        int productQty = 4;
 
-        homePage.setSearchField("necklace");
+        homePage.setSearchField("pillow");
         homePage.clickSearchButton();
         Assert.assertTrue(searchResultsPage.isProductsInLista(productName));
         productPage.setQtyField(productQty);
         productPage.clickAddToCartButton();
-        Assert.assertEquals(productName.toLowerCase() + " was added to your shopping cart."
-                , cartPage.getSuccessMessageSpan().toLowerCase());
+        Assert.assertEquals(productName.toLowerCase() + "was added to cart" , cartPage.getSuccessMessageSpan().toLowerCase());
         Assert.assertEquals(productQty + "", cartPage.getQtyField());
     }
     @Test
     public void loginAndAddToCartTest() {
-        String productName = "Silver Desert necklace";
+        String productName = "SHAY PRINTED PILLOW";
         int productQty = 2;
 
         homePage.clickAccountLink();
@@ -34,7 +33,7 @@ public class CartTest extends BaseTest{
         loginPage.setEmailField(userEmail);
         loginPage.setPassField(userPass);
         loginPage.clickLoginButton();
-        homePage.setSearchField("necklace");
+        homePage.setSearchField("pillow");
         homePage.clickSearchButton();
         Assert.assertTrue(searchResultsPage.isProductsInLista(productName));
         productPage.setQtyField(productQty);

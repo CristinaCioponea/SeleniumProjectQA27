@@ -15,7 +15,7 @@ public class CartPage {
             private WebElement successMessageSpan;
 
             @FindBy(css = ".qty[name*='cart']")
-            private WebElement qtyField;
+            public WebElement qtyField;
 
             public String getSuccessMessageSpan(){
             return successMessageSpan.getText();

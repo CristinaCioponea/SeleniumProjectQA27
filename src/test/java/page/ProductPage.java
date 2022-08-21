@@ -11,14 +11,14 @@ public class ProductPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    @FindBy(id = "qty")
+    @FindBy(css = "#qty")
     private WebElement qtyField;
     @FindBy(css = ".btn-cart[onclick]")
     private WebElement addToCartButton;
 
-    public void setQtyField(int quantity) {
-        qtyField.clear();
+    public void setQtyField (int quantity) {
         qtyField.sendKeys(quantity + "");
+
     }
 
     public void clickAddToCartButton() {
